@@ -1,0 +1,14 @@
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\obj\Debug\net7.0\OrientedObjectProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\obj\Debug\net7.0\OrientedObjectProject.AssemblyInfoInputs.cache
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\obj\Debug\net7.0\OrientedObjectProject.AssemblyInfo.cs
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\obj\Debug\net7.0\OrientedObjectProject.csproj.CoreCompileInputs.cache
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\bin\Debug\net7.0\OrientedObjectProject.exe
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\bin\Debug\net7.0\OrientedObjectProject.deps.json
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\bin\Debug\net7.0\OrientedObjectProject.runtimeconfig.json
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\bin\Debug\net7.0\OrientedObjectProject.dll
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\bin\Debug\net7.0\OrientedObjectProject.pdb
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\obj\Debug\net7.0\OrientedObjectProject.dll
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\obj\Debug\net7.0\refint\OrientedObjectProject.dll
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\obj\Debug\net7.0\OrientedObjectProject.pdb
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\obj\Debug\net7.0\OrientedObjectProject.genruntimeconfig.cache
+C:\Users\Pichau\Desktop\Computação\OrientedObjectProject\obj\Debug\net7.0\ref\OrientedObjectProject.dll
