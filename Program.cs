@@ -22,5 +22,46 @@ Abstração:
         A classe veículo tem objetos e métodos, porém para criar uma instância precisa de mais informações
         que são definnidar a partir de outras classes.
 
-*/ 
+------------------------------------------------------------------------------------------------------------------
+
+
+Aplicativo de Gerenciamento de Contas Bancárias
+
+Classe Conta
+
+    Atributos
+
+        CPF ok
+        Nome ok
+        Saldo ok
+        Limite ok 
+        Cartão de Crédito        
+
+    Métodos
+        Saque
+        Deposito
+        Consulta Saldo
+        Rendimento
+        Transferir
+        Extrato
+
+TODO:
+
+Classe Conta Corrente
+Classe Conta Poupança
+Métodos da classe base
+
+------------------------------------------------------------------------------------------------------------------ */
+
+Conta minhaConta = new Conta(1000, "Matheus");
+
+minhaConta.ChecarSaldo();
+
+
+
+
+
+
+
+
 
