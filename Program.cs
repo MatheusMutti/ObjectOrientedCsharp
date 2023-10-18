@@ -53,15 +53,13 @@ Métodos da classe base
 
 ------------------------------------------------------------------------------------------------------------------ */
 
-Conta minhaConta = new Conta(1000, "Matheus");
+Conta ContaMatheus = new Conta(1000, "Matheus");
+Conta ContaJulia = new Conta(2000, "Julia");
 
-minhaConta.ChecarSaldo();
+ContaMatheus.ChecarSaldo();
 
+ContaMatheus.Transferencia(500, ContaJulia);
 
-
-
-
-
-
-
+ContaMatheus.ChecarSaldo();
+ContaJulia.ChecarSaldo();
 
