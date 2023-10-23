@@ -42,24 +42,20 @@ Classe Conta
         Deposito
         Consulta Saldo
         Rendimento
-        Transferir
-        Extrato
-
-TODO:
-
-Classe Conta Corrente
-Classe Conta Poupança
-Métodos da classe base
+        Transferir ok
+        Extrato ok
 
 ------------------------------------------------------------------------------------------------------------------ */
 
-Conta ContaMatheus = new Conta(1000, "Matheus");
-Conta ContaJulia = new Conta(2000, "Julia");
+Conta ContaMatheus = new Conta.ContaCorrente (200, "Matheus");
+Conta ContaJulia = new Conta.ContaPoupança (200, "Julia");
 
-ContaMatheus.ChecarSaldo();
 
-ContaMatheus.Transferencia(500, ContaJulia);
+ContaMatheus.Transferencia(50, ContaJulia);
 
-ContaMatheus.ChecarSaldo();
-ContaJulia.ChecarSaldo();
+ContaMatheus.Saque(50);
+ContaJulia.Saque(350);
+ContaMatheus.Deposito(200);
 
+ContaMatheus.Extrato();
+ContaJulia.Extrato();

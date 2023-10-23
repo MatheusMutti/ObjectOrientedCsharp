@@ -1,45 +1,90 @@
 public class Conta {
 
     private static int _proximoNumeroConta = 1;
-    public int NumeroConta { get; private set; }    
-    private int _saldo;    
-    public string Nome {get; set;}
-    public int CPF {get; set;}
-    public decimal Limite {get; set;}
+    public int NumeroConta { get; private set; }
+    private int _saldo;
+    List<string> ListaTransacoes = new List<string>();    
 
-    public Conta(int saldoInicial, string nomeInicial)
+    public Conta()
     {
-        _saldo = saldoInicial;
-        Nome = nomeInicial;
         NumeroConta = _proximoNumeroConta;
         _proximoNumeroConta++;        
     }
-    public virtual void ChecarSaldo()
-    {
-        Console.WriteLine($"Saldo da conta corrente: {_saldo}");
-    }
+
+    // Atributos da Classe
+    public virtual void ChecarSaldo(){}
     public virtual void Transferencia(int valor, Conta destino)
     {
-        _saldo -= valor;
-        destino._saldo += valor;
+        if (valor > _saldo){
+            Console.WriteLine("Saldo insuficiente!");
+        }
+        else {
+            _saldo -= valor;
+            destino._saldo += valor;
+            //Adicionando transação a lista:
+            destino.ListaTransacoes.Add($"Transferência: +{valor}");
+            ListaTransacoes.Add($"Transferência: -{valor}");
+        }
     }    
     public virtual void Saque(int valor)
     {
-        _saldo -= valor;
-    }    
-    public virtual void Extrato(){}
+        if (valor > _saldo){
+            Console.WriteLine("Saldo insuficiente!");
+        }
+        else {
+            _saldo -= valor;
+            ListaTransacoes.Add($"Saque: -{valor}");
+        }        
+    }
+    public virtual void Deposito(int valor)
+    {
+        _saldo += valor;
+        ListaTransacoes.Add($"Deposito +{valor}");
+    }
+    public virtual void Extrato(){
+        
+        Console.WriteLine($"Extrato da conta:\n");
+        
+        foreach (string item in ListaTransacoes)
+        {
+            Console.WriteLine(item);
+        }
+        Console.WriteLine("------------------------");
+    }
 
+    // Criação subclasse Conta
 public class ContaCorrente : Conta {
+    public string Nome {get; set;}
+    public int CPF {get; set;}        
+    public decimal Limite {get; set;}
 
-    public ContaCorrente( int saldoInicial, string nomeInicial) : base (saldoInicial, nomeInicial){}
+    public ContaCorrente( int saldoInicial, string nomeInicial){
+        
+        this._saldo = saldoInicial;
+        this.Nome = nomeInicial;
+    }
 
-    public override void ChecarSaldo(){}
+    public override void ChecarSaldo(){
+
+        Console.WriteLine($"Saldo da conta corrente: {_saldo}");
+
+    } //pode-se implementar métodos específicos para get e set
+    
 }
 public class ContaPoupança : Conta {
+    public string Nome {get; set;}
+    public int CPF {get; set;}        
 
-    public ContaPoupança(int saldoInicial, string nomeInicial) : base (saldoInicial, nomeInicial){}
+    public ContaPoupança(int saldoInicial, string nomeInicial){
 
-    public override void ChecarSaldo(){}
+        this._saldo = saldoInicial;
+        this.Nome = nomeInicial;
+    }
+
+    public override void ChecarSaldo(){
+
+        Console.WriteLine($"Saldo da conta poupança: {_saldo}");
+    }
 }
 
 }
