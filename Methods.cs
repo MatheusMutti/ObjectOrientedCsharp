@@ -1,9 +1,22 @@
 public class Conta {
-
+    private string _nome;
+    public string Nome 
+    {
+        get => Nome.ToUpper();
+    
+    set
+    {
+        if (value == "")
+        {
+            throw new ArgumentException ("Nome não pode ser vazio");
+        };
+}}
+    public int CPF 
+    {get; set;}        
     private static int _proximoNumeroConta = 1;
     public int NumeroConta { get; private set; }
     private int _saldo;
-    List<string> ListaTransacoes = new List<string>();    
+    List<string> ListaTransacoes = new List<string>();    //alterar forma de implementação para receber um tipo de entrada "transação" e não string, adicionar métodos para adicionar transação assim que feita
 
     public Conta()
     {
@@ -53,38 +66,18 @@ public class Conta {
     }
 
     // Criação subclasse Conta
-public class ContaCorrente : Conta {
-    public string Nome {get; set;}
-    public int CPF {get; set;}        
-    public decimal Limite {get; set;}
+    public class ContaCorrente : Conta {
+        public decimal Limite {get; set;}
 
-    public ContaCorrente( int saldoInicial, string nomeInicial){
+        public ContaCorrente(int saldoInicial, string nomeInicial){
         
-        this._saldo = saldoInicial;
-        this.Nome = nomeInicial;
-    }
-
-    public override void ChecarSaldo(){
-
-        Console.WriteLine($"Saldo da conta corrente: {_saldo}");
-
-    } //pode-se implementar métodos específicos para get e set
-    
-}
-public class ContaPoupança : Conta {
-    public string Nome {get; set;}
-    public int CPF {get; set;}        
+            _saldo = saldoInicial;
+            Nome = nomeInicial;
+        }}
+public class ContaPoupança : Conta {     
 
     public ContaPoupança(int saldoInicial, string nomeInicial){
 
-        this._saldo = saldoInicial;
-        this.Nome = nomeInicial;
-    }
-
-    public override void ChecarSaldo(){
-
-        Console.WriteLine($"Saldo da conta poupança: {_saldo}");
-    }
-}
-
-}
+        _saldo = saldoInicial;
+        Nome = nomeInicial;
+    }}}

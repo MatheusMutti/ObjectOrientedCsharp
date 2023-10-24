@@ -47,7 +47,7 @@ Classe Conta
 
 ------------------------------------------------------------------------------------------------------------------ */
 
-Conta ContaMatheus = new Conta.ContaCorrente (200, "Matheus");
+Conta ContaMatheus = new Conta.ContaCorrente (200, "");
 Conta ContaJulia = new Conta.ContaPoupança (200, "Julia");
 
 
@@ -59,3 +59,5 @@ ContaMatheus.Deposito(200);
 
 ContaMatheus.Extrato();
 ContaJulia.Extrato();
+
+Console.WriteLine(ContaMatheus.Nome);
