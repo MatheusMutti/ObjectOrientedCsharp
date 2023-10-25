@@ -47,17 +47,12 @@ Classe Conta
 
 ------------------------------------------------------------------------------------------------------------------ */
 
-Conta ContaMatheus = new Conta.ContaCorrente (200, "");
+Conta ContaMatheus = new Conta.ContaCorrente (200, "Matheus");
 Conta ContaJulia = new Conta.ContaPoupança (200, "Julia");
 
-
 ContaMatheus.Transferencia(50, ContaJulia);
-
 ContaMatheus.Saque(50);
 ContaJulia.Saque(350);
 ContaMatheus.Deposito(200);
 
 ContaMatheus.Extrato();
-ContaJulia.Extrato();
-
-Console.WriteLine(ContaMatheus.Nome);
